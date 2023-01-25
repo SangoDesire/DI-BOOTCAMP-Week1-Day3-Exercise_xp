@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+} */
+
+/*========== PANNEAU GAUCHE ==============*/
+.panel-gauche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E7E5E8;
+    color: #333334;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+}
+
+.panel-gauche hr {
+    width: 80%;
+}
+
+.description-auteur {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.panel-gauche img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #D3D2D5;
+    margin-bottom: 15px;
+}
+
+.description-auteur h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.description-auteur p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact span,
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.contact p {
+    text-align: justify;
+}
+
+.contact i {
+    margin-right: 5px;
+}
+
+.social-media {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.social-media i {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.social-media a {
+    color: #333334;
+}
+
+/*============= PANNEAU DROIT ===========*/
+
+.panel-droit {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    left: 25%;
+    top: 0;
+}
+
+.cv-details {
+    margin-bottom: 20px;
+    color: #333334;
+}
+
+.cv-details h1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+.cv-details hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cv-details p {
+    text-align: justify;
+}
+
+.diplome {
+    padding-bottom: 15px;
+}
+
+.diplome h3 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.diplome h3::before {
+    font-family: FontAwesome;
+    content: "\f111";
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.diplome h5 {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.diplome ul,
+.skills-desc ul {
+    margin-left: 20px;
+}
+
+.diplome ul li,
+.skills-desc ul li {
+    list-style-type: none;
+    font-size: 14px;
+    padding: 2px;
+}
+
+.diplome ul li::before,
+.skills-desc ul li::before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    margin-right: 5px;
+}
+
+.skills-desc {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+/*========== RESPONSIVE ==========*/
+@media screen and (max-width:600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-gauche {
+        position: unset;
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .panel-droit {
+        position: unset;
+    }
+
+    .cv-details h1 {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .diplome h3 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .skills-desc {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    .panel-gauche {
+        width: 30%;
+    }
+
+    .panel-droit {
+        left: 30%;
+    }
+
+    .contact span,
+    p {
+        font-size: 12px;
+    }
+
+    .contact p {
+        text-align: left;
+    }
+}
